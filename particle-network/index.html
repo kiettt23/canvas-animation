@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Particle Network Animation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <div class="info-panel">
+    <h1>Particle Network</h1>
+    <p>Move your mouse to interact with particles</p>
+    <div class="controls">
+      <label>
+        Particles: <span id="countDisplay">120</span>
+        <input type="range" id="particleCount" min="30" max="300" value="120">
+      </label>
+      <label>
+        Connection Distance: <span id="distDisplay">150</span>
+        <input type="range" id="connectionDist" min="50" max="300" value="150">
+      </label>
+      <label>
+        Speed: <span id="speedDisplay">1.0</span>
+        <input type="range" id="speed" min="1" max="30" value="10">
+      </label>
+      <button id="toggleColors">Change Color Theme</button>
+    </div>
+  </div>
+
+  <script src="particle.js"></script>
+  <script src="animation.js"></script>
+</body>
+</html>
