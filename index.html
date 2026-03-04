@@ -40,14 +40,20 @@
     }
 
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      max-width: 1200px;
+      display: flex;
+      gap: 20px;
+      max-width: 1400px;
       width: 100%;
     }
 
+    .gallery .card {
+      flex: 1;
+      min-width: 0;
+    }
+
     .card {
+      display: flex;
+      flex-direction: column;
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 16px;
@@ -79,6 +85,7 @@
       opacity: 0.6;
       font-size: 0.9rem;
       line-height: 1.5;
+      flex: 1;
     }
 
     .card .tag {
