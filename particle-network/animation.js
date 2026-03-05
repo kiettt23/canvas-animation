@@ -30,12 +30,21 @@
     initParticles();
   });
 
-  // --- Mouse Tracking ---
+  // --- Mouse & Touch Tracking ---
   canvas.addEventListener('mousemove', (e) => {
     mouse.x = e.clientX;
     mouse.y = e.clientY;
   });
   canvas.addEventListener('mouseleave', () => {
+    mouse.x = null;
+    mouse.y = null;
+  });
+  canvas.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+    mouse.x = e.touches[0].clientX;
+    mouse.y = e.touches[0].clientY;
+  }, { passive: false });
+  canvas.addEventListener('touchend', () => {
     mouse.x = null;
     mouse.y = null;
   });

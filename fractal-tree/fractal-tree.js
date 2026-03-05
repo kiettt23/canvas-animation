@@ -36,6 +36,10 @@
   canvas.addEventListener('mousemove', (e) => {
     mouse.x = e.clientX / canvas.width;
   });
+  canvas.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+    mouse.x = e.touches[0].clientX / canvas.width;
+  }, { passive: false });
 
   /**
    * Recursive function to draw a branch.

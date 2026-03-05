@@ -29,6 +29,14 @@
     mouse.x = e.clientX;
     mouse.y = e.clientY;
   });
+  canvas.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+    mouse.x = e.touches[0].clientX;
+    mouse.y = e.touches[0].clientY;
+  }, { passive: false });
+  canvas.addEventListener('touchstart', (e) => {
+    ripples.push({ x: e.touches[0].clientX, y: e.touches[0].clientY, radius: 0, maxRadius: 200, alpha: 1 });
+  });
 
   canvas.addEventListener('click', (e) => {
     ripples.push({ x: e.clientX, y: e.clientY, radius: 0, maxRadius: 200, alpha: 1 });

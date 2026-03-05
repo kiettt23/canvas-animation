@@ -33,6 +33,13 @@
       cursor: pointer; font-size: 0.78rem; transition: all 0.3s;
     }
     .controls button:hover { background: rgba(122,92,255,0.3); }
+    @media (max-width: 480px) {
+      .info-panel { left: 10px; right: 10px; bottom: 10px; max-width: none; padding: 14px 18px; }
+      .info-panel h1 { font-size: 1.1rem; }
+      .info-panel p { font-size: 0.78rem; }
+      .controls label { font-size: 0.72rem; }
+      .controls button { font-size: 0.72rem; padding: 6px 12px; }
+    }
 
     .back-btn {
       position: fixed; top: 20px; left: 20px; z-index: 10;

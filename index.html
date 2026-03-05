@@ -41,14 +41,31 @@
 
     .gallery {
       display: flex;
+      flex-wrap: wrap;
       gap: 20px;
       max-width: 1400px;
       width: 100%;
     }
 
     .gallery .card {
-      flex: 1;
+      flex: 1 1 260px;
       min-width: 0;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 1.8rem; }
+      .subtitle { margin-bottom: 28px; }
+      .gallery { gap: 14px; }
+      .card { padding: 24px; }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.4rem; }
+      body { padding: 24px 14px; }
+      .card { padding: 20px; }
+      .card .icon { font-size: 2rem; margin-bottom: 10px; }
+      .card h2 { font-size: 1.1rem; }
+      .card p { font-size: 0.82rem; }
     }
 
     .card {

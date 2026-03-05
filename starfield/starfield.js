@@ -31,6 +31,11 @@
     mouse.x = e.clientX / canvas.width;
     mouse.y = e.clientY / canvas.height;
   });
+  canvas.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+    mouse.x = e.touches[0].clientX / canvas.width;
+    mouse.y = e.touches[0].clientY / canvas.height;
+  }, { passive: false });
 
   /**
    * Each star has x, y (random position in 3D space) and z (depth).

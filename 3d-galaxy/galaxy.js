@@ -233,6 +233,10 @@ window.addEventListener('mousemove', (e) => {
   mouse.x = (e.clientX / innerWidth) * 2 - 1;
   mouse.y = -(e.clientY / innerHeight) * 2 + 1;
 });
+window.addEventListener('touchmove', (e) => {
+  mouse.x = (e.touches[0].clientX / innerWidth) * 2 - 1;
+  mouse.y = -(e.touches[0].clientY / innerHeight) * 2 + 1;
+});
 
 // --- Ambient light for subtle scene illumination ---
 const ambientLight = new THREE.AmbientLight('#ffffff', 0.1);
